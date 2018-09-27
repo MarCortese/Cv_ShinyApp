@@ -1,0 +1,159 @@
+library(shinythemes)
+library(shiny)
+library(stringr)
+library(plotly)
+#library(DT)
+
+#setwd("C:/Users/Integris/Desktop/CVSHINY/")
+ui <- fluidPage(
+  theme=shinytheme("superhero"),
+  
+  
+
+  navbarPage(title="Marco Cortese",
+  #themeSelector(),
+  sidebarLayout(
+  sidebarPanel(
+    tags$img(src="Profilo.jpg", width=150),width=2
+                ),
+               mainPanel(
+                 tabsetPanel(type = "tabs",
+                             tabPanel("Informazioni Generali",
+                                      h1(),
+                                      h4("Nome:"),
+                                      h4("Marco Cortese"),
+                                      hr(),
+                                      h4("Luogo e Data di nascita:"),
+                                      h4("Crotone 23 Ottobre 1990"),
+                                      hr(),
+                                      h4("Indirizzo:"),
+                                      h4("Viale Caterina da Forlì 58 - Milano 20146"),
+                                      hr(),
+                                      h4("Email:"),
+                                      h4("marcocortese.stat@gmail.com"),
+                                      hr(),
+                                      h4("Numero:"),
+                                      h4("3282674828"),
+                                      hr(),
+                                      wellPanel(
+                                        helpText(   a("Profilo linkedin",     href="https://it.linkedin.com/in/marco-cortese-6b0375107")
+                                      
+                                      ))),
+                             tabPanel("Formazione",
+                                      HTML('<center><img src="logo_unical.png" width="200"></center>'),
+                                      h2(),
+                                      HTML('<center><img src="unical.jpg" width="200"></center>'),
+                                      fluidRow(
+                                        column(6,
+                                              h4("Laurea Magistrale",align="center"),
+                                              h4("Statistica ed Informatica per le Decisioni e le Analisi di Mercato",br(),"Votazione 110/110"),
+                                              h2(),
+                                              h4("Tesi di Laurea", align="center"),
+                                              h4("Un'analisi statistica per la valutazione dell'efficacia farmacologica nella gestione del dolore muscolo scheletrico in pazienti anziani.", align= "center"),
+                                              h3(),
+                                              h5("È stato effettuato uno studio per la valutazione dell'efficacia del farmaco Tapentadolo nella riduzione del dolore nei pazienti ospiti della struttura analizzata. Sono stati utilizzati test non parametrici a contorno della tecnica di regressioni per dati longitudinali G.E.E.", align="justify"),
+                                              h1(),
+                                              HTML('<center><img src="magistrale.png" width="250"></center>')),
+                                        column(6,
+                                              h4("Laurea Triennale",align="center"),
+                                              h4("Statistica per le Aziende e le Assicurazioni, Gestione ed Analisi dei dati",br(),"Votazione 97/110"),
+                                              h2(),
+                                              h4("Tesi di Laurea",align="center"),
+                                              h4("Indice di borsa Comit. Creazione, caratteristiche ed evoluzione del Comit Globale.", align="center"),
+                                              h2(),
+                                              h5("Serie Storica sull'indice di borsa Comit Globale creato e gestito dalla banca Intesa San Paolo. L'analisi si è concentrata nella creazione di una serie storica mediante l'approccio Box-Jenkins sui valori registrati quotidianamente dall'anno di generazione di tale indice di borsa.", align="justify"),
+                                              h1(),
+                                              HTML('<center><img src="triennale.png" width="250"></center>'))
+                                        ),
+                                      h2()
+                                      ),
+                             tabPanel("Esperienze Lavorative",
+                                      hr(),
+                                      h5("Data Scientist presso Integris S.P.A"),
+                                      h5("Data Scientist, programmatore in ambiente R. Compito: sviluppare ed eseguire algoritmi per l’analisi statistica in campo predittivo per il cliente Olivetti. Completare la progettazione con la creazione di dashboard per la rappresentazione attraverso i tools Qlik Sense e Power Bi.",align="justify"),
+                                      h1(),
+                                      tags$img(src="logo-integris.png", width=100),
+                                      hr()
+                             ),
+                             tabPanel("Certificati e Attestati",
+                                      h1(),
+                                      h4("Livello inglese B1 Cambridge"),
+                                      tags$img(src="inglese.jpg", width=200),
+                                      h2(),
+                                      h4("Corsi online seguiti"),
+                                      tags$img(src="machineLearning.png", width=200),
+                                      tags$img(src="Polynomial.png", width=200),
+                                      tags$img(src="Probability.png", width=200),
+                                      tags$img(src="training.png", width=200),
+                                      tags$img(src="shiny.jpg", width=200),
+                                      
+                                      
+                                      h2(),
+                                      h4("Certificazioni"),
+                                      tags$img(src="SPSS.jpg", width=200),
+                                      tags$img(src="teco.png", width=200),
+                                      h2()),
+                             tabPanel("Skills",
+                                      h5(),
+                                      h3("Competenze Tecniche"),
+                                      h2(),
+                                      fluidRow(
+                                        column(4,
+                                            h5("R"),
+                                            h1(),
+                                            h5("Shiny App"),
+                                            h1(),
+                                            h5("Knime"),
+                                            h1(),
+                                            h5("Qlik Sense"),
+                                            h1(),
+                                            h5("PowerBi")
+                                          ),
+                                        column(4,
+                                          h1(),
+                                          tags$img(src="RStudio-Logo-Blue-Gradient.png",width=80),
+                                          #hr(),
+                                          tags$img(src="shinyLogo.png",width=50),
+                                          #hr(),
+                                          tags$img(src="knime.png",width=50),
+                                          #hr(),
+                                          tags$img(src="qlik-sense-logo.png",width=80),
+                                          #hr(),
+                                          tags$img(src="Power BI logo.jpg",width=100)
+                                          )),
+                                        h3("Competenze Personali"),
+                                        h2(),
+                                        h5("Team Work"),
+                                        h1(),
+                                        h5("Versatilità"),
+                                        h1(),
+                                        h5("Puntualità"),
+                                        h1(),
+                                        h5("Precisione"),
+                                        h1(),
+                                        h5("Cura dei dettagli"),
+                                        h1(),
+                                        h5("Motivazione")),
+                             tabPanel("Ulteriori informazioni",
+                                      h2(),
+                                      HTML('<center><img src="Marco.jpg" width="250"></center>'),
+                                      h2(),  
+                                      h4("Sono una persona semplice e sincera. Ho buone capacità di lavoro in gruppo e buona esperienza nella gestione di progetti. Versatile e con ottima capacità di sintesi. Sono una persona estremamente puntuale, rispettoso di ogni scadenza e con elevata attenzione ai dettagli, non lascio nulla al caso e non mi fermo mai al minimo indispensabile. Sono socievole e disponibile. 
+                                          Amo mettermi in gioco e dimostrare le mie capacità. Cerco sempre di migliorarmi e di apprendere sempre cose nuove per una crescita personale e professionale. 
+                                          Il mio obiettivo è diventare un Data Scientist completo in grado di seguire il dato in tutte le sue forme ed estrapolare le informazioni e i significati più nascosti.
+                                          ", align="justify"),
+                                      hr(),
+                                      h4("Seguo gli sport, con particolare attenzione verso il calcio, ho praticato vela per 4 anni, sono appassionato di film e musica, mi diletto con le percussioni acustiche.",align="justify"),
+                                      HTML('<rigth><img src="calcio.jpg" width="250"></right>'),
+                                      HTML('<left><img src="congas.png" width="250"></left>')
+                                      
+                             
+                                      )
+                                       
+               )#tabsetPAnel
+             )#mainPanel
+               )#sidebarLayout 
+    )#navbar
+  )#fluidPage
+server <- function(input, output) {}
+shinyApp(ui = ui, server = server)
