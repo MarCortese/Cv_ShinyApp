@@ -12,27 +12,27 @@ Il curriculum si divide in
   
 ## Informazioni iniziali
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/1_info.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/1_info.jpg)
 
 ## Formazione
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/2_form.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/2_form.jpg)
 
 ## Esperienze lavorative
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/3_lav.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/3_lav.jpg)
 
 ## Attestati
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/4_att.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/4_att.jpg)
 
 ## Skills
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/5_skill.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/5_skill.jpg)
 
 ## Ulteriori informazioni
 
-![alt text](https://raw.githubusercontent.com/MarCortese/CVSHINY/master/CVSHINY/Screen/6_altro.jpg)
+![alt text](https://raw.githubusercontent.com/MarCortese/Cv_ShinyApp/master/CVSHINY/Screen/6_altro.jpg)
 
 
 
